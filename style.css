@@ -1,0 +1,189 @@
+:root {
+    --ff: 'Overpass', sans-serif;
+    --fw-normal: 400;
+    --fw-bold: 700;
+    --clr-primary: hsl(25, 97%, 53%);
+    --clr-neutral-white: hsl(0, 0%, 100%);
+    --clr-neutral-lgrey: hsl(217, 12%, 63%);
+    --clr-neutral-midgray: hsl(216, 12%, 54%);
+    --clr-neutral-blue: hsl(213, 19%, 18%);
+    --clr-neutral-dark: hsl(215, 22%, 15%);
+    --clr-neutral-darkbl: hsl(216, 12%, 8%); 
+    --clr-bg: hsl(228, 11%, 9%);
+    --clr-bg-round: hsl(214, 22%, 19%);
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  body {
+    height: 100vh;
+    background-color: var(--clr-bg);
+    display: grid;
+    place-content: center;
+    font-family: var(--ff);
+    font-weight: 400;
+    
+    
+  }
+
+.star {
+    background-color: var(--clr-bg-round);
+    padding: 1rem;
+    border-radius: 150%;
+}
+.container {
+    background-color: #232A34;
+    max-width: 327px;
+    padding: 1.2rem;
+    display: grid;
+    place-content: center;
+    margin: 2rem; 
+    gap: 1em;
+    border-radius: 25px;
+}
+
+
+h1 {
+    color: var(--clr-neutral-white);
+    font-weight: var(--fw-normal);
+    font-size: 1.5rem;
+}
+
+p {
+    color: var(--clr-neutral-lgrey);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+.raiting {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+.btn {
+    border:none;
+    width: 42px;
+    height: 42px;
+    border-radius: 200%;
+    background-color: var(--clr-bg-round);
+    color:var(--clr-neutral-lgrey);
+    font-family: inherit;
+    font-size: 14px;
+    
+} 
+
+.btn:hover {
+  background-color: var(--clr-primary);
+}
+.btn:focus {
+  background-color: var(--clr-neutral-lgrey);
+  color:var(--clr-neutral-white);
+}
+
+#submit {
+    width: 100%;
+    background-color: var(--clr-primary);
+    border: none;
+    border-radius: 25px;
+    padding: 0.8em;
+    font-family: inherit;
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-white);
+    font-size: 0.937rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+#submit:hover {
+  background-color: var(--clr-neutral-white);
+  color: var(--clr-primary);
+}
+#thankyou-page {
+  display:none;
+}
+.thx-page {
+  margin: 0 auto;
+  max-width:90%;
+}
+.thx-title, .selection {
+  text-align: center;
+}
+.selection {
+  max-width: fit-content;
+  background-color: var(--clr-neutral-blue);
+  border-radius: 25px;
+  padding: 0.5em;
+  color: var(--clr-primary);
+  margin: 1.2em auto;
+  width: 90%;
+}
+.thx-title {
+  font-size: 1.5em;
+  margin: 0.5em;
+}
+.thx-text {
+  text-align: center;
+  line-height: 1.5;
+  margin: 1em 0;
+  font-size: 14px;
+  font-weight: var(--fw-normal);
+}
+
+.attribution { 
+  font-size: 11px;
+  text-align: center;
+  color: var(--clr-neutral-white); 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+@media (min-width: 600px) {
+  .btn {
+    width: 51px;
+    height: 51px;
+  }
+  h1 {
+    margin-top: 1.75rem;
+  }
+  p {
+    font-size: 0.938rem;
+  }
+  .thx-title {
+    font-size: 1.75rem;
+  }
+  .thx-text {
+    margin: 0 0.5em;
+    font-size: 0.937rem;
+  }
+  .selection {
+    font-size:0.937rem;
+  }
+  .container {
+    max-width: 412px;
+    padding: 2.5rem 1.5rem;
+  }
+}
